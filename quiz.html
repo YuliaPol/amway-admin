@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amway</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./style/style.css?578578">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar-aside">
+                <button type="button" class="btn-aside-menu toggle-sidebar">
+                </button>
+            </div>
+            <div class="navbar-user">
+                <div class="user">
+                    <div class="user-wrapper show-user-dropdown">
+                        <div class="icon-user"></div>
+                        <div class="user-name">USER_NAME</div>
+                    </div>
+                    <div class="dropdown-user">
+                        <ul>
+                            <li>
+                                <a href="#" class="logout">Выход </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="menu-sidebar">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="sidebar-nav">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-home"></i>
+                                    Ключевые показатели
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-th"></i>
+                                    Сводная информация
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="breadcrumps">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa fa-home"></i> Главная</span>
+                        </a>
+                    </li>
+                    <li>
+                        /
+                        Ключевые показатели
+                    </li>
+                </ul>
+            </div>
+            <div class="header-page">
+                <h1>
+                    Ключевые показатели
+                </h1>
+            </div>
+            <div class="page-content">
+                <div class="create-quiz">
+                    <button type="button" class="btn btn-success btn-show-modal " data-toggle="modal" data-target="#createQuiz">Создать
+                        опрос</button>
+                    <div id="createQuiz" class="fade modal" role="dialog" tabindex="-1">
+                        <div class="modal-dialog ">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">×</button>
+                                    <h2>Создание опроса</h2>
+                                </div>
+                                <div class="modal-body">
+
+                                    <form id="w0" action="/admin/quiz" method="post">
+                                        <input type="hidden" name="_csrf-backend"
+                                            value="hlVdHUYBHfB55MTojtj4CICFuqo11_C9qSDk7DjHa770Gj9qLVdopQu0tdHllqBR9Lz06ESBwfvFU4rUdPFbyQ==">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group field-quiz-name">
+                                                    <label class="control-label" for="quiz-name">Название опроса</label>
+                                                    <input type="text" id="quiz-name" class="form-control"
+                                                        name="Quiz[name]">
+
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="col-md-4">
+                                                    <button type="submit" class="btn btn-success">Сохранить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-box">
+                    <div id="p0" data-pjax-container="" data-pjax-push-state="" data-pjax-timeout="1000">
+                        <div class="grid-view">
+                            <div class="table-wrapper">
+                                <div id="w1" class="grid-view">
+                                    <table class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th><a href="/admin/quiz/index?sort=name" data-sort="name">Название
+                                                        опроса</a></th>
+                                                <th><a href="/admin/quiz/index?sort=id_quiz_status"
+                                                        data-sort="id_quiz_status">Статус</a></th>
+                                                <th><a href="/admin/quiz/index?sort=id_quiz_type"
+                                                        data-sort="id_quiz_type">Тип</a></th>
+                                                <th><a href="/admin/quiz/index?sort=date_created"
+                                                        data-sort="date_created">Дата создания</a></th>
+                                                <th>Управление</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-key="9">
+                                                <td>тест 225</td>
+                                                <td>Отправлено</td>
+                                                <td>Email</td>
+                                                <td>1-0-2020 7:</td>
+                                                <td>
+                                                    <a href="/admin/import?id=9" class="fa fa-inbox"></a>
+                                                    <a href="/admin/quiz/view?id=9" class="fa fa-eye"></a>
+                                                    <a href="/admin/quiz/delete?id=9" class="fa fa-remove"
+                                                        onclick="return confirm('Вы действительно хотите удалить запись?')"
+                                                        ;=""></a>
+                                                </td>
+                                            </tr>
+                                            <tr data-key="5">
+                                                <td>тест 22</td>
+                                                <td>Отправлено</td>
+                                                <td>Email</td>
+                                                <td>31-53-2020 8:</td>
+                                                <td>
+                                                    <a href="/admin/import?id=5" class="fa fa-inbox"></a>
+                                                    <a href="/admin/quiz/view?id=5" class="fa fa-eye"></a>
+                                                    <a href="/admin/quiz/delete?id=5" class="fa fa-remove"
+                                                        onclick="return confirm('Вы действительно хотите удалить запись?')"
+                                                        ;=""></a>
+                                                </td>
+                                            </tr>
+                                            <tr data-key="3">
+                                                <td>test12</td>
+                                                <td>Отправлено</td>
+                                                <td>Email</td>
+                                                <td>30-59-2020 18:</td>
+                                                <td>
+                                                    <a href="/admin/import?id=3" class="fa fa-inbox"></a>
+                                                    <a href="/admin/quiz/view?id=3" class="fa fa-eye"></a>
+                                                    <a href="/admin/quiz/delete?id=3" class="fa fa-remove"
+                                                        onclick="return confirm('Вы действительно хотите удалить запись?')"
+                                                        ;=""></a>
+                                                </td>
+                                            </tr>
+                                            <tr data-key="2">
+                                                <td>testr</td>
+                                                <td>Отправлено</td>
+                                                <td>Email</td>
+                                                <td>3-27-2020 9:</td>
+                                                <td>
+                                                    <a href="/admin/import?id=2" class="fa fa-inbox"></a>
+                                                    <a href="/admin/quiz/view?id=2" class="fa fa-eye"></a>
+                                                    <a href="/admin/quiz/delete?id=2" class="fa fa-remove"
+                                                        onclick="return confirm('Вы действительно хотите удалить запись?')"
+                                                        ;=""></a>
+                                                </td>
+                                            </tr>
+                                            <tr data-key="1">
+                                                <td>test</td>
+                                                <td>Отправлено</td>
+                                                <td>Email</td>
+                                                <td>18-33-2020 14:</td>
+                                                <td>
+                                                    <a href="/admin/import?id=1" class="fa fa-inbox"></a>
+                                                    <a href="/admin/quiz/view?id=1" class="fa fa-eye"></a>
+                                                    <a href="/admin/quiz/delete?id=1" class="fa fa-remove"
+                                                        onclick="return confirm('Вы действительно хотите удалить запись?')"
+                                                        ;=""></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/jquery-3.5.1.min.js"></script>
+    <script src="./script/script.js"></script>
+    <script>
+        var idmodal = $('.btn-show-modal').attr('data-target').split('#')[1];
+
+        // Get the modal
+        var modal = document.getElementById(idmodal);
+        // Get the <span> element that closes the modal
+        var span = $('.create-quiz').find('.close');
+
+        // When the user clicks on the button, open the modal
+        $('.btn-show-modal').click(function(e){
+            modal.style.display = "block";
+        });
+
+        // When the user clicks on <span> (x), close the modal
+        span.click( function(e) {
+            modal.style.display = "none";
+        });
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

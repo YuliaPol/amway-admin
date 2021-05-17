@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amway</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./style/style.css?578578">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar-aside">
+                <button type="button" class="btn-aside-menu toggle-sidebar">
+                </button>
+            </div>
+            <div class="navbar-user">
+                <div class="user">
+                    <div class="user-wrapper show-user-dropdown">
+                        <div class="icon-user"></div>
+                        <div class="user-name">USER_NAME</div>
+                    </div>
+                    <div class="dropdown-user">
+                        <ul>
+                            <li>
+                                <a href="#" class="logout">Выход </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="menu-sidebar">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="sidebar-nav">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-home"></i>
+                                    Ключевые показатели
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-th"></i>
+                                    Сводная информация
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="breadcrumps">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa fa-home"></i> Главная</span>
+                        </a>
+                    </li>
+                    <li>
+                        /
+                        Ключевые показатели
+                    </li>
+                </ul>
+            </div>
+            <div class="header-page">
+                <h1>
+                    Ключевые показатели
+                </h1>
+            </div>
+            <div class="page-content">
+                <div class="create">
+                    <div class="create-form">
+                        <div class="box box-info">
+                            <div class="box-header with-border"></div>
+                            <div class="box-footer clearfix" style="">
+                                <form id="w0" action="/admin/user/create" method="post">
+                                    <input type="hidden" name="_csrf-backend"
+                                        value="jFZFW70QZmVzAn76TYP4FLeNu6MdD2nICK3Dhw0xWZ7-GScs1kYTMAFSD8MmzaBNw7T14WxZWI5k3q2_QQdp6Q==">
+                                    <div>
+                                        <p>Основные контактные данные</p>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-col">
+                                            <div class="field-signupform-phone required">
+                                                <label class="control-label" for="signupform-phone">Мобильный
+                                                    телефон:</label>
+                                                <input type="text" id="signupform-phone" class="form-control"
+                                                    name="SignupForm[phone]" aria-required="true">
+
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-col">
+                                            <div class="field-signupform-phone_center">
+                                                <label class="control-label" for="signupform-phone_center">Телефон
+                                                    центра</label>
+                                                <input type="text" id="signupform-phone_center" class="form-control"
+                                                    name="SignupForm[phone_center]">
+
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-col">
+                                            <div class="field-signupform-email required">
+                                                <label class="control-label" for="signupform-email">E-mail:</label>
+                                                <input type="text" id="signupform-email" class="form-control"
+                                                    name="SignupForm[email]" aria-required="true">
+
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-col">
+                                            <div class="field-signupform-name required">
+                                                <label class="control-label" for="signupform-name">ФИО:</label>
+                                                <input type="text" id="signupform-name" class="form-control"
+                                                    name="SignupForm[name]" aria-required="true">
+
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-col">
+                                            <div class="field-signupform-username">
+                                                <label class="control-label" for="signupform-username">Логин:</label>
+                                                <input type="text" id="signupform-username" class="form-control"
+                                                    name="SignupForm[username]" placeholder="LOGIN">
+
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-col">
+                                            <div class="field-signupform-id_region_leader">
+                                                <label class="control-label"
+                                                    for="signupform-id_region_leader">Региональный руководитель</label>
+                                                <select id="signupform-id_region_leader" class="form-control"
+                                                    name="SignupForm[id_region_leader]">
+                                                    <option value="">Выберите пользователя</option>
+                                                    <option value="1">Лихачов Дмитрий Сергеевич</option>
+                                                    <option value="3">Синцова Татьяна</option>
+                                                    <option value="4">Сиротинская Снежана</option>
+                                                    <option value="5">Иванова Ольга</option>
+                                                    <option value="6">Непомнящих Светлана</option>
+                                                </select>
+
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-col">
+                                            <div class="field-signupform-id_leader">
+                                                <label class="control-label"
+                                                    for="signupform-id_leader">Руководитель</label>
+                                                <select id="signupform-id_leader" class="form-control"
+                                                    name="SignupForm[id_leader]">
+                                                    <option value="">Выберите пользователя</option>
+                                                    <option value="29">Александр Назиров</option>
+                                                </select>
+
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-col">
+                                            <div class="field-signupform-id_admin1">
+                                                <label class="control-label" for="signupform-id_admin1">Администратор
+                                                    1</label>
+                                                <select id="signupform-id_admin1" class="form-control"
+                                                    name="SignupForm[id_admin1]">
+                                                    <option value="">Выберите пользователя</option>
+                                                    <option value="1">Лихачов Дмитрий Сергеевич</option>
+                                                    <option value="7">Elena Kazankova</option>
+                                                    <option value="8">Vasiliy Scherbakov</option>
+                                                    <option value="9">Natalia Gorelova</option>
+                                                </select>
+
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-col">
+                                            <div class="field-signupform-id_admin2">
+                                                <label class="control-label" for="signupform-id_admin2">Администратор
+                                                    2</label>
+                                                <select id="signupform-id_admin2" class="form-control"
+                                                    name="SignupForm[id_admin2]">
+                                                    <option value="">Выберите пользователя</option>
+                                                    <option value="1">Лихачов Дмитрий Сергеевич</option>
+                                                    <option value="7">Elena Kazankova</option>
+                                                    <option value="8">Vasiliy Scherbakov</option>
+                                                    <option value="9">Natalia Gorelova</option>
+                                                </select>
+
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-col">
+                                            <div class="field-signupform-id_admin3">
+                                                <label class="control-label" for="signupform-id_admin3">Администратор
+                                                    3</label>
+                                                <select id="signupform-id_admin3" class="form-control"
+                                                    name="SignupForm[id_admin3]">
+                                                    <option value="">Выберите пользователя</option>
+                                                    <option value="1">Лихачов Дмитрий Сергеевич</option>
+                                                    <option value="7">Elena Kazankova</option>
+                                                    <option value="8">Vasiliy Scherbakov</option>
+                                                    <option value="9">Natalia Gorelova</option>
+                                                </select>
+
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-col">
+                                            <div class="field-signupform-password required">
+                                                <label class="control-label" for="signupform-password">Пароль:</label>
+                                                <input type="password" id="signupform-password" class="form-control"
+                                                    name="SignupForm[password]" placeholder="******"
+                                                    aria-required="true">
+
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-col">
+                                            <div class="field-signupform-password_repeat required">
+                                                <label class="control-label" for="signupform-password_repeat">Пароль еще
+                                                    раз:</label>
+                                                <input type="password" id="signupform-password_repeat"
+                                                    class="form-control" name="SignupForm[password_repeat]"
+                                                    placeholder="******" aria-required="true">
+
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-success">Сохранить</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/jquery-3.5.1.min.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

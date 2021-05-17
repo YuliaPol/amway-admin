@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amway</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./style/daterangepicker.css">
+    <link rel="stylesheet" href="./style/daterangepicker-kv.css">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar-aside">
+                <button type="button" class="btn-aside-menu toggle-sidebar">
+                </button>
+            </div>
+            <div class="navbar-user">
+                <div class="user">
+                    <div class="user-wrapper show-user-dropdown">
+                        <div class="icon-user"></div>
+                        <div class="user-name">USER_NAME</div>
+                    </div>
+                    <div class="dropdown-user">
+                        <ul>
+                            <li>
+                                <a href="#" class="logout">Выход </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="menu-sidebar">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="sidebar-nav">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-home"></i>
+                                    Ключевые показатели
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-th"></i>
+                                    Сводная информация
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="breadcrumps">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa fa-home"></i> Главная</span>
+                        </a>
+                    </li>
+                    <li>
+                        /
+                        Ключевые показатели
+                    </li>
+                </ul>
+            </div>
+            <div class="header-page">
+                <h1>
+                    Ключевые показатели
+                </h1>
+            </div>
+            <div class="page-content">
+                <form id="selector-filter" method="post" data-pjax="1">
+                    <div class="filter-wrapper">
+                        <div class="box">
+                            <h6>Регион </h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">Регион 1</option>
+                                    <option value="2">Регион 2</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Города </h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">Город 1</option>
+                                    <option value="2">Город 2</option>
+                                    <option value="3">Город 3</option>
+                                    <option value="4">Город 4</option>
+                                    <option value="5">Город 5</option>
+                                    <option value="6">Город 6</option>
+                                    <option value="7">Город 7</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>ТЦ </h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="3">ТЦ 1</option>
+                                    <option value="4">ТЦ 2</option>
+                                    <option value="5">ТЦ 3</option>
+                                    <option value="6">ТЦ 4</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h6>Период</h6>
+                            <div class="drp-container form-group field-filter-date">
+                                <input type="text" id="filter-date" class="form-control" value="">
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Пол клиента </h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">Женсикий</option>
+                                    <option value="2">Мужской</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Возраст клиента</h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">18-25</option>
+                                    <option value="2">25-32</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>NPS фильтр</h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">NPS фильтр</option>
+                                    <option value="2">NPS фильтр</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Способ рассылки</h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">Способ рассылки</option>
+                                    <option value="2">Способ рассылки</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Статус</h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">Статус</option>
+                                    <option value="2">Статус</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" style="visibility: hidden">Подобрать</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="box-container">
+                    <div class="box-wrapper box-shadow nps-row">
+                        <h3>
+                            Насколько вероятно, что Вы порекомендуете Вашим друзьям и знакомым Центр Amway
+                            в сравнении с другими магазинами, предлагающими аналогичные товары?
+                        </h3>
+                        <div class="main-nps">
+                            <div>
+                                <table class="block-table table-striped" id="faceectable">
+                                    <tbody>
+                                        <tr>
+                                            <th class="cntr_num" style="color: #d86754;" colspan="7">
+                                                DETRACTORS
+                                            </th>
+                                            <th class="cntr_num" style="color: #f2ca46;" colspan="2">
+                                                PASSIVES
+                                            </th>
+                                            <th class="cntr_num" style="color: #77ae5e;" colspan="2">
+                                                PROMOTERS
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="cntr_num" colspan="7">
+                                                <div class="planka-long"></div>
+                                            </th>
+                                            <th class="cntr_num" colspan="2">
+                                                <div class="planka-long"></div>
+                                            </th>
+                                            <th class="cntr_num" colspan="2">
+                                                <div class="planka-long"></div>
+                                            </th>
+                                        </tr>
+                                        <tr class="facees-tr">
+                                            <th class="cntr_num"><img class="number-table" src="./img/0.svg" alt="img">
+                                            </th>
+                                            <th class="cntr_num"><img class="number-table" src="./img/1.svg" alt="img">
+                                            </th>
+                                            <th class="cntr_num"><img class="number-table" src="./img/2.svg" alt="img">
+                                            </th>
+                                            <th class="cntr_num"><img class="number-table" src="./img/3.svg" alt="img">
+                                            </th>
+                                            <th class="cntr_num"><img class="number-table" src="./img/4.svg" alt="img">
+                                            </th>
+                                            <th class="cntr_num"><img class="number-table" src="./img/5.svg" alt="img">
+                                            </th>
+                                            <th class="cntr_num"><img class="number-table" src="./img/6.svg" alt="img">
+                                            </th>
+                                            <th class="cntr_num"><img class="number-table" src="./img/7.svg" alt="img">
+                                            </th>
+                                            <th class="cntr_num"><img class="number-table" src="./img/8.svg" alt="img">
+                                            </th>
+                                            <th class="cntr_num"><img class="number-table" src="./img/9.svg" alt="img">
+                                            </th>
+                                            <th class="cntr_num"><img class="number-table" src="./img/10.svg" alt="img">
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th><img class="body-table" src="./img/0H.svg" alt="img"></th>
+                                            <th><img class="body-table" src="./img/1H.svg" alt="img"></th>
+                                            <th><img class="body-table" src="./img/2H.svg" alt="img"></th>
+                                            <th><img class="body-table" src="./img/3H.svg" alt="img"></th>
+                                            <th><img class="body-table" src="./img/4H.svg" alt="img"></th>
+                                            <th><img class="body-table" src="./img/5H.svg" alt="img"></th>
+                                            <th><img class="body-table" src="./img/6H.svg" alt="img"></th>
+                                            <th><img class="body-table" src="./img/7H.svg" alt="img"></th>
+                                            <th><img class="body-table" src="./img/8H.svg" alt="img"></th>
+                                            <th><img class="body-table" src="./img/9H.svg" alt="img"></th>
+                                            <th><img class="body-table" src="./img/10H.svg" alt="img"></th>
+                                        </tr>
+                                        <tr class="dig-th">
+                                            <th>
+                                                <p class="sum-bot">24</p>
+                                            </th>
+                                            <th>
+                                                <p class="sum-bot">43</p>
+                                            </th>
+                                            <th>
+                                                <p class="sum-bot">1</p>
+                                            </th>
+                                            <th>
+                                                <p class="sum-bot">32</p>
+                                            </th>
+                                            <th>
+                                                <p class="sum-bot">52</p>
+                                            </th>
+                                            <th>
+                                                <p class="sum-bot">23</p>
+                                            </th>
+                                            <th>
+                                                <p class="sum-bot">43</p>
+                                            </th>
+                                            <th>
+                                                <p class="sum-bot">22</p>
+                                            </th>
+                                            <th>
+                                                <p class="sum-bot">23</p>
+                                            </th>
+                                            <th>
+                                                <p class="sum-bot">331</p>
+                                            </th>
+                                            <th>
+                                                <p class="sum-bot">439</p>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="left-block">
+                                <table class="table-sp table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="label-promot"
+                                                    style="background-image: url(./img/PromotersG.svg);">
+                                                    <div>
+                                                        <span class="table-txt11-sp">222</span>
+                                                        <span class="table-txt12-sp">Promoters</span>
+                                                        <span class="table-txt13-sp">22.22%</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="label-promot"
+                                                    style="background-image: url(./img/PassivesG.svg);">
+                                                    <div>
+                                                        <span class="table-txt11-sp">77</span>
+                                                        <span class="table-txt12-sp">Passives</span>
+                                                        <span class="table-txt13-sp">33.56%</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="label-promot"
+                                                    style="background-image: url(./img/DetractorsG.svg);">
+                                                    <div>
+                                                        <span class="table-txt11-sp">13</span>
+                                                        <span class="table-txt12-sp">Detractors</span>
+                                                        <span class="table-txt13-sp">45.55%</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="block-circle">
+                                    <div class="circle">
+                                        <span>NPS Score</span>
+                                        <span>44.34</span>
+                                        <span>%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-wrapper box-shadow chart-wrapper">
+                        <div class="header-chart">
+                            <h2>Ответы 0-6 баллов </h2>
+                            <h3>С какими сложностями Вы столкнулись при посещении Центра Amway (город)?</h3>
+                        </div>
+                        <div class="chart-content">
+                            <div class="chart-row">
+                                <div class="left-row">
+                                    <div class="box-chart">
+                                        <div style="position: relative;">
+                                            <canvas id="answer-06" width="250" height="250"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="box-info box-info-7 mt-right">
+                                        <div class="info-header">
+                                            Поведение персонала
+                                        </div>
+                                        <div class="info-table">
+                                            <div class="info-row">
+                                                <div class="name">
+                                                    Сотрудники не обращали внимания.не получил помощь
+                                                </div>
+                                                <div class="percent">
+                                                    20%
+                                                </div>
+                                                <div class="line">
+                                                    <div class="line-active line-active-7-1" style="width: 20%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-row">
+                                                <div class="name">
+                                                    Мне или другому нагрубили
+                                                </div>
+                                                <div class="percent">
+                                                    60%
+                                                </div>
+                                                <div class="line">
+                                                    <div class="line-active line-active-7-2" style="width: 60%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-row">
+                                                <div class="name">
+                                                    Сотрудников не было в зале
+                                                </div>
+                                                <div class="percent">
+                                                    10%
+                                                </div>
+                                                <div class="line">
+                                                    <div class="line-active line-active-7-3" style="width: 10%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-row">
+                                                <div class="name">
+                                                    Отказали в помощи
+                                                </div>
+                                                <div class="percent">
+                                                    10%
+                                                </div>
+                                                <div class="line">
+                                                    <div class="line-active line-active-7-4" style="width: 10%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="square square-7"></div>
+                                    </div>
+                                    <div class="box-info box-info-1 mt-right">
+                                        <div class="info-header">
+                                            Размешение товара
+                                        </div>
+                                        <div class="info-table">
+                                            <div class="info-row">
+                                                <div class="name">
+                                                    Переместить на более видное место
+                                                </div>
+                                                <div class="percent">
+                                                    90%
+                                                </div>
+                                                <div class="line">
+                                                    <div class="line-active line-active-1-1" style="width: 90%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-row">
+                                                <div class="name">
+                                                    Обеспечить наличие нужного товара
+                                                </div>
+                                                <div class="percent">
+                                                    10%
+                                                </div>
+                                                <div class="line">
+                                                    <div class="line-active line-active-1-2" style="width: 10%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="square square-1"></div>
+                                    </div>
+                                    <div class="box-info box-info-6 mt-right">
+                                        <div class="info-header">
+                                            Обеспечить более комфортное пребывание
+                                        </div>
+                                        <div class="info-table">
+                                            <div class="info-row">
+                                                <div class="name">
+                                                    Слишком жарко
+                                                </div>
+                                                <div class="percent">
+                                                    10%
+                                                </div>
+                                                <div class="line">
+                                                    <div class="line-active line-active-6-1" style="width: 10%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-row">
+                                                <div class="name">
+                                                    Слишком холодно
+                                                </div>
+                                                <div class="percent">
+                                                    60%
+                                                </div>
+                                                <div class="line">
+                                                    <div class="line-active line-active-6-2" style="width: 60%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-row">
+                                                <div class="name">
+                                                    Много людей в помещении Центра
+                                                </div>
+                                                <div class="percent">
+                                                    10%
+                                                </div>
+                                                <div class="line">
+                                                    <div class="line-active line-active-6-3" style="width: 10%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-row">
+                                                <div class="name">
+                                                    В помещении недостаточно чисто
+                                                </div>
+                                                <div class="percent">
+                                                    10%
+                                                </div>
+                                                <div class="line">
+                                                    <div class="line-active line-active-6-4" style="width: 10%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-row">
+                                                <div class="name">
+                                                    В помещении присуствовал запах
+                                                </div>
+                                                <div class="percent">
+                                                    10%
+                                                </div>
+                                                <div class="line">
+                                                    <div class="line-active line-active-6-5" style="width: 10%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="square square-6"></div>
+                                    </div>
+                                </div>
+                                <div class="right-row">
+                                    <div class="box-legend">
+                                        <div class="legend-table">
+                                            <div class="legend-row">
+                                                <div class="square-col">
+                                                    <span class="square square-1" ></span>
+                                                </div>
+                                                <div class="name-col">
+                                                    Размещение товара
+                                                </div>
+                                                <div class="percent-col">
+                                                    37%
+                                                </div>
+                                                <div class="count-col">
+                                                    25шт
+                                                </div>
+                                            </div>
+                                            <div class="legend-row">
+                                                <div class="square-col">
+                                                    <span class="square square-2" ></span>
+                                                </div>
+                                                <div class="name-col">
+                                                    Ожидание в очереди на кассу
+                                                </div>
+                                                <div class="percent-col">
+                                                    15%
+                                                </div>
+                                                <div class="count-col">
+                                                    10шт
+                                                </div>
+                                            </div>
+                                            <div class="legend-row">
+                                                <div class="square-col">
+                                                    <span class="square square-3" ></span>
+                                                </div>
+                                                <div class="name-col">
+                                                    Консультации и мероприятия  не оправдали ожиданий
+                                                </div>
+                                                <div class="percent-col">
+                                                    9%
+                                                </div>
+                                                <div class="count-col">
+                                                    8шт
+                                                </div>
+                                            </div>
+                                            <div class="legend-row">
+                                                <div class="square-col">
+                                                    <span class="square square-4" ></span>
+                                                </div>
+                                                <div class="name-col">
+                                                    Трудности при возврате
+                                                </div>
+                                                <div class="percent-col">
+                                                    10%
+                                                </div>
+                                                <div class="count-col">
+                                                    9шт
+                                                </div>
+                                            </div>
+                                            <div class="legend-row">
+                                                <div class="square-col">
+                                                    <span class="square square-5" ></span>
+                                                </div>
+                                                <div class="name-col">
+                                                    Рассположение Центра
+                                                </div>
+                                                <div class="percent-col">
+                                                    5%
+                                                </div>
+                                                <div class="count-col">
+                                                    4шт
+                                                </div>
+                                            </div>
+                                            <div class="legend-row">
+                                                <div class="square-col">
+                                                    <span class="square square-6" ></span>
+                                                </div>
+                                                <div class="name-col">
+                                                    Некомфортное прибывание
+                                                </div>
+                                                <div class="percent-col">
+                                                    2%
+                                                </div>
+                                                <div class="count-col">
+                                                    1шт
+                                                </div>
+                                            </div>
+                                            <div class="legend-row">
+                                                <div class="square-col">
+                                                    <span class="square square-7" ></span>
+                                                </div>
+                                                <div class="name-col">
+                                                    Поведение персонала
+                                                </div>
+                                                <div class="percent-col">
+                                                    22%
+                                                </div>
+                                                <div class="count-col">
+                                                    19шт
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/jquery-3.5.1.min.js"></script>
+    <script src="./script/moment.js"></script>
+    <script src="./script/daterangepicker.js"></script>
+    <script src="./script/script.js"></script>
+    <script src="./script/Chart.js"></script>
+    <script src="./script/script-chart-2.js"></script>
+    <script>
+        var answer06Data = {
+            labels: [
+                "Размещение товара",
+                "Ожидание в очереди на кассу",
+                "Консультации и мероприятия не оправдали ожиданий",
+                "Трудности при возврате",
+                "Рассположение Центра",
+                "Некомфортное прибывание",
+                "Поведение персонала"
+            ],
+            datasets: [
+                {
+                    data: [
+                        25,
+                        10,
+                        8,
+                        9,
+                        4,
+                        1,
+                        19
+                    ],
+                    backgroundColor: ["#C6B7E8", "#85D2F0", "#EE8E7B", "#FEC03D", "#FFE700", "#8ED995", "#7AA0D7"],
+                    hoverBackgroundColor: ["#C6B7E8", "#85D2F0", "#EE8E7B", "#FEC03D", "#FFE700", "#8ED995", "#7AA0D7"],
+
+                }],
+            round: true
+        };
+    </script>
+    <script>
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $('.field-filter-date input').daterangepicker({
+                    opens: 'rigth',
+                    locale: {
+                        format: 'DD-MM-YYYY',
+                        applyLabel: 'Принять',
+                        cancelLabel: 'Отмена',
+                        invalidDateLabel: 'Выберите дату',
+                        daysOfWeek: ['Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс', 'Пн'],
+                        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                        firstDay: 1
+                    }
+                }, function (start, end, label) {
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

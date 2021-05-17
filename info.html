@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amway</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./style/daterangepicker.css">
+    <link rel="stylesheet" href="./style/daterangepicker-kv.css">
+    <link rel="stylesheet" href="./style/style.css?57857857">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar-aside">
+                <button type="button" class="btn-aside-menu toggle-sidebar">
+                </button>
+            </div>
+            <div class="navbar-user">
+                <div class="user">
+                    <div class="user-wrapper show-user-dropdown">
+                        <div class="icon-user"></div>
+                        <div class="user-name">USER_NAME</div>
+                    </div>
+                    <div class="dropdown-user">
+                        <ul>
+                            <li>
+                                <a href="#" class="logout">Выход </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="menu-sidebar">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="sidebar-nav">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-home"></i>
+                                    Ключевые показатели
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-th"></i>
+                                    Сводная информация
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="breadcrumps">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa fa-home"></i> Главная</span>
+                        </a>
+                    </li>
+                    <li>
+                        /
+                        Сводная информация
+                    </li>
+                </ul>
+            </div>
+            <div class="header-page">
+                <h1>
+                    Сводная информация
+                </h1>
+            </div>
+            <div class="page-content">
+                <form id="selector-filter" method="post" data-pjax="1">
+                    <div class="filter-wrapper">
+                        <div class="box">
+                            <h6>Регион </h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">Регион 1</option>
+                                    <option value="2">Регион 2</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Города </h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">Город 1</option>
+                                    <option value="2">Город 2</option>
+                                    <option value="3">Город 3</option>
+                                    <option value="4">Город 4</option>
+                                    <option value="5">Город 5</option>
+                                    <option value="6">Город 6</option>
+                                    <option value="7">Город 7</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>ТЦ </h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="3">ТЦ 1</option>
+                                    <option value="4">ТЦ 2</option>
+                                    <option value="5">ТЦ 3</option>
+                                    <option value="6">ТЦ 4</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h6>Период</h6>
+                            <div class="drp-container form-group field-filter-date">
+                                <input type="text" id="filter-date" class="form-control" value="">
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Пол клиента </h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">Женсикий</option>
+                                    <option value="2">Мужской</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Возраст клиента</h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">18-25</option>
+                                    <option value="2">25-32</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>NPS фильтр</h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">NPS фильтр</option>
+                                    <option value="2">NPS фильтр</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Способ рассылки</h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">Способ рассылки</option>
+                                    <option value="2">Способ рассылки</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Статус</h6>
+                            <div class="form-group field-filter-item">
+                                <select class="form-control input-sm">
+                                    <option value="">Все</option>
+                                    <option value="1">Статус</option>
+                                    <option value="2">Статус</option>
+                                </select>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" style="visibility: hidden">Подобрать</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="row-ankets">
+                    <div class="row btns-info">
+                        <div class="container-ii">
+                            <div class="blue show-block">
+                                <div class="frist-block">
+                                    <div class="img-wrp">
+                                        <img src="./img/alert-1.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="second-block">
+                                    <div class="top-block">11175</div>
+                                    <div class="bot-block">
+                                        <span>
+                                            Всего анкет
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-ii">
+                            <div class="green  wb show-block">
+                                <div class="frist-block">
+                                    <div class="img-wrp">
+                                        <img src="./img/alert-2.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="second-block">
+                                    <div class="top-block">5.7%</div>
+                                    <div class="bot-block">
+                                        <span>
+                                            Доля алертов
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-ii">
+                            <div class="orange wb show-block">
+                                <div class="frist-block">
+                                    <div class="img-wrp">
+                                        <div class="top-block"></div>
+                                        <img src="./img/alert-3.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="second-block">
+                                    <div class="top-block"></div>
+                                    <div class="top-block">0</div>
+                                    <div class="bot-block right30">
+                                        <span>
+                                            Просроченные
+                                        </span>
+                                        <span>
+                                            алерты
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-ii">
+                            <div class="yellow wb show-block">
+                                <div class="frist-block">
+                                    <div class="img-wrp">
+                                        <img src="./img/alert-4.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="second-block">
+                                    <div class="top-block">35</div>
+                                    <div class="bot-block">
+                                        <span>
+                                            Новые алерты
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-ii">
+                            <div class="wb show-block" style="background-color: #4692e6;display: flex; ">
+                                <div class="frist-block">
+                                    <div class="img-wrp">
+                                        <img src="./img/alert-5.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="second-block">
+                                    <div class="top-block">21</div>
+                                    <div class="bot-block">
+                                        <span>
+                                            алерты в работе
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="searh-row">
+                        <div class="search-form">
+                            <div class="title">
+                                Поиск анкеты по ее номеру
+                            </div>
+
+                                <div class="input-search1">
+                                    <input type="text" class="form-control" placeholder="Введите номер анкеты">
+                                    <a id="sendButton" href="" class="btn btn-default">Поиск</a>
+                                </div>
+
+                        </div>
+
+                        <div class="box">
+                            <div class="form-group field-filter-item customselect-wrapper">
+                                <div class="select"><select class="form-control customselect select-hidden" name="AdresAnswerSearch[part_answer_id]">
+                                    <option value="" selected="" data-id="59244">Результативные анкеты</option>
+                                                                                                                                                                                                                                                        <option value="1" data-id="34456">Все анкеты</option>
+                                                                                                                                                        </select><div class="select-styled">Результативные анкеты</div><ul class="select-options"><li rel="" data-id="59244">Результативные анкеты</li><li rel="1" data-id="34456">Все анкеты</li></ul></div>
+                                <div class="select-caret"></div>
+                            </div>
+                        </div>
+
+                            <form id="upload" method="post" action="/admin/answers/download">
+
+                                <input type="hidden" name="_csrf-backend" value="98GNDObhW3vqK7vw41Egyyeudx1wtO_zmZNuq_X8gPChmM91las-MZtfi8mBHVX5aMITT0X8psTg6x74pJ_jiA==">
+                                <input type="hidden" name="AdresAnswerSearch[region1]">
+                                <input type="hidden" name="AdresAnswerSearch[city1]">
+                                <input type="hidden" name="AdresAnswerSearch[location1]">
+                                <input type="hidden" name="AdresAnswerSearch[gender]">
+                                <input type="hidden" name="AdresAnswerSearch[age]">
+                                <input type="hidden" name="AdresAnswerSearch[NPS]">
+                                <input type="hidden" name="AdresAnswerSearch[type_send]">
+                                <input type="hidden" name="AdresAnswerSearch[position]">
+                                <input type="hidden" name="AdresAnswerSearch[status]">
+                                <input type="hidden" name="AdresAnswerSearch[start_date]" value="23.11.2020">
+                                <input type="hidden" name="AdresAnswerSearch[end_date]" value="23.12.2020">
+                                <input type="hidden" name="part_answer_id">
+                                <input type="hidden" name="type" value="" class="type">
+                                <div class="upload">
+
+                                <div class="text">
+                                    <a href="javascript:void(0)" class="download-xls">Выгрузка</a>
+                                </div>
+                                <div class="img">
+                                    <a href="javascript:void(0)" class="download-xls">
+                                        <img src="/backend/web/img/xls.png" alt="">
+                                    </a>
+                                </div>
+                               </div>
+                            </form>
+
+                    </div>
+            </div>
+                <div class="table-box">
+                    <div id="p0" data-pjax-container="" data-pjax-push-state="" data-pjax-timeout="1000">
+                        <div class="grid-view">
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <a href="#">Регион</a>
+                                            </th>
+                                            <th>
+                                                <a href="#">Статус</a>
+                                            </th>
+                                            <th>
+                                                <a href="#">Город</a>
+                                            </th>
+                                            <th>
+                                                <a href="#">ТЦ</a>
+                                            </th>
+                                            <th>
+                                                <a href="#">Пол</a>
+                                            </th>
+                                            <th>
+                                                <a href="#">Оценка</a>
+                                            </th>
+                                            <th>
+                                                <a href="#">Возраст</a>
+                                            </th>
+                                            <th>
+                                                <a href="#">Должность</a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Казахстан
+                                            </td>
+                                            <td></td>
+                                            <td>Нур-Султан</span></td>
+                                            <td>Магазин Нур-Султан</td>
+                                            <td>Жен.</td>
+                                            <td>10</td>
+                                            <td>Свыше 35</td>
+                                            <td>ABO</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Казахстан
+                                            </td>
+                                            <td><span class="label label-new">Новый</span></td>
+                                            <td>Нур-Султан</span></td>
+                                            <td>Магазин Нур-Султан</td>
+                                            <td>Жен.</td>
+                                            <td>10</td>
+                                            <td>Свыше 35</td>
+                                            <td>ABO</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Казахстан
+                                            </td>
+                                            <td><span class="label label-new">Новый</span></td>
+                                            <td>Нур-Султан</span></td>
+                                            <td>Магазин Нур-Султан</td>
+                                            <td>Жен.</td>
+                                            <td>10</td>
+                                            <td>Свыше 35</td>
+                                            <td>ABO</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Казахстан
+                                            </td>
+                                            <td></td>
+                                            <td>Нур-Султан</span></td>
+                                            <td>Магазин Нур-Султан</td>
+                                            <td>Жен.</td>
+                                            <td>10</td>
+                                            <td>Свыше 35</td>
+                                            <td>ABO</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Казахстан
+                                            </td>
+                                            <td><span class="label label-work">В работе</span></td>
+                                            <td>Нур-Султан</span></td>
+                                            <td>Магазин Нур-Султан</td>
+                                            <td>Жен.</td>
+                                            <td>10</td>
+                                            <td>Свыше 35</td>
+                                            <td>ABO</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Казахстан
+                                            </td>
+                                            <td></td>
+                                            <td>Нур-Султан</span></td>
+                                            <td>Магазин Нур-Султан</td>
+                                            <td>Жен.</td>
+                                            <td>10</td>
+                                            <td>Свыше 35</td>
+                                            <td>ABO</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Казахстан
+                                            </td>
+                                            <td><span class="label label-expired">Ответ на согласовании </span></td>
+                                            <td>Нур-Султан</span></td>
+                                            <td>Магазин Нур-Султан</td>
+                                            <td>Жен.</td>
+                                            <td>10</td>
+                                            <td>Свыше 35</td>
+                                            <td>ABO</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Казахстан
+                                            </td>
+                                            <td></td>
+                                            <td>Нур-Султан</span></td>
+                                            <td>Магазин Нур-Султан</td>
+                                            <td>Жен.</td>
+                                            <td>10</td>
+                                            <td>Свыше 35</td>
+                                            <td>ABO</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <ul class="pagination bg-white">
+                                <li class="prev disabled"><span>Назад</span></li>
+                                <li class="active"><a href="#" data-page="0">1</a></li>
+                                <li><a href="#" data-page="1">2</a></li>
+                                <li><a href="#" data-page="2">3</a></li>
+                                <li><a href="#" data-page="3">4</a></li>
+                                <li class="next"><a href="#" data-page="1">Далее</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/jquery-3.5.1.min.js"></script>
+    <script src="./script/moment.js"></script>
+    <script src="./script/daterangepicker.js"></script>
+    <script src="./script/script.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $('.field-filter-date input').daterangepicker({
+                    opens: 'rigth',
+                    locale: {
+                        format: 'DD-MM-YYYY',
+                        applyLabel: 'Принять',
+                        cancelLabel: 'Отмена',
+                        invalidDateLabel: 'Выберите дату',
+                        daysOfWeek: ['Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс', 'Пн'],
+                        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                        firstDay: 1
+                    }
+                }, function (start, end, label) {
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
